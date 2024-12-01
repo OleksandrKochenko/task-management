@@ -59,4 +59,22 @@ export class TasksService {
     await this.tasksRepository.save(task);
     return task;
   }
+
+  async updateTaskDescription(
+    id: string,
+    description: string,
+    user: User,
+  ): Promise<Task> {
+    const task = await this.getTaskById(id, user);
+    task.description = description;
+    await this.tasksRepository.save(task);
+    return task;
+  }
+
+  async updateTaskTitle(id: string, title: string, user: User): Promise<Task> {
+    const task = await this.getTaskById(id, user);
+    task.title = title;
+    await this.tasksRepository.save(task);
+    return task;
+  }
 }

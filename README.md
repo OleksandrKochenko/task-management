@@ -39,7 +39,9 @@ $ npm install
 $ npm run start
 
 # watch mode
+Open Docker desktop, run postgres-nest container
 $ npm run start:dev
+Use pgAdmin4 for overview and managing database
 
 # production mode
 $ npm run start:prod
